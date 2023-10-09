@@ -71,7 +71,7 @@ h2 {
 	margin: 0 20px;
 	z-index: 0;
 }
-.picture img {
+.image-portrait, .image-camera {
 	width: 360px;
 	height: auto;
 }
@@ -100,7 +100,7 @@ h2 {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: #000;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
@@ -355,7 +355,7 @@ input[type="submit"] {
 	.picture {
 		width: 80%;
 	}
-	.picture img {
+	.image-portrait, .image-camera {
 		width: 250px;
 		height: auto;
 	}
