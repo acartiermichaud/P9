@@ -37,6 +37,11 @@ body {
 	width: 20px;
 	height: 20px;
 }
+.carousel-image {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -55,12 +60,14 @@ body {
 	z-index: -1;
 }
 .picture {
-	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0 20px;
 	z-index: 0;
 }
 .picture img {
-	width: 100%;
+	width: 360px;
 	height: auto;
 }
 #about-me {
@@ -180,6 +187,7 @@ body {
 }
 #contact .container {
 	display: flex;
+	justify-content: space-between;
 }
 .picture.right::before {
 	content: ' ';
@@ -192,7 +200,10 @@ body {
 	z-index: -1;
 }
 .form-container {
-	flex : 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 form {
 	display: flex;
@@ -222,9 +233,6 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 1180px) {
-	.picture {
-		flex : 2;
-	}
 	#about, #contact .container {
 		align-items: center;
 	}
@@ -238,6 +246,9 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 1000px) {
+	.carousel-image {
+		height: 350px;
+	}
 	#about{
 		flex-direction: column;
 	}
@@ -294,6 +305,9 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
+	.carousel-image {
+		height: 200px;
+	}
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
@@ -325,5 +339,9 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+	}
+	.picture img {
+		width: 250px;
+		height: auto;
 	}
 }
