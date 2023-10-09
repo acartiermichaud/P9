@@ -1,10 +1,16 @@
 body {
 	max-width: 1920px;
 	margin: auto;
+	font-size: 16px;
 }
 * {
 	font-family: 'Inter';
 	font-style: normal;
+	text-align: justify;
+}
+h2 {
+	font-size: 30px;
+	margin: 0;
 }
 .top-header {
 	background-color: white;
@@ -18,12 +24,11 @@ body {
 	align-items: center;
 }
 .top-header .name {
-	font-size: 26px;
+	font-size: 30px;
 }
 .nav ul {
 	display: flex;
 	list-style-type: none;
-	font-size: 14px;
 	margin-bottom: 0;
 }
 .nav li {
@@ -71,22 +76,21 @@ body {
 	height: auto;
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
-	font-size: 30px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60%;
+	font-size: 18px;
+	width: 80%;
 }
 #about-me p {
 	width: 80%;
-	font-size: 14px;
 }
 .title{
 	text-align: center;
@@ -140,7 +144,6 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
 }
 .quote__author {
 	font-family: Spectral;
@@ -240,7 +243,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h3, #about-me p {
 		width: 100%;
 	}
 }
@@ -248,6 +251,19 @@ input[type="submit"] {
 @media all and (max-width: 1000px) {
 	.carousel-image {
 		height: 350px;
+	}
+	.top-header {
+		flex-direction: column;
+		padding-inline: 0;
+	}
+	.top-header .nav, .top-header .nav ul {
+		width: 100%;
+		padding: 0 0 0 0;
+	}
+	.top-header .nav li {
+		flex: 1;
+		padding-block: 1em;
+		text-align: center;
 	}
 	#about{
 		flex-direction: column;
@@ -268,6 +284,9 @@ input[type="submit"] {
 		text-align: center;
 		margin-top: 1em;
 	}
+	.quote__text {
+		font-size: 25px;
+	}
 	#services .container {
 		flex-direction: column;
 	}
@@ -275,13 +294,13 @@ input[type="submit"] {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0
+		margin: 2em 0;
 	}
 	.service__description{
 		margin-bottom: 1em;
 	}
 	#services .container::before{
-		width: 30%;
+		width: 21%;
 		height: 100%;
 		bottom: 0;
 		right: 0;
@@ -305,24 +324,20 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
+	.about-me__title, .title {
+		font-size: 26px;
+	}
+	.top-header .name {
+		font-size: 22px;
+	}
 	.carousel-image {
 		height: 200px;
 	}
-	.top-header {
-		flex-direction: column;
-		padding-inline: 0;
-	}
-	.top-header .nav, .top-header .nav ul {
-		width: 100%;
-		padding: 0 0 0 0;
-	}
-	.top-header .nav li {
-		flex: 1;
-		padding-block: 1em;
-		text-align: center;
-	}
 	.picture.left::before, .picture.right::before {
 		height: 150px;
+	}
+	.quote__text {
+		font-size: 20px;
 	}
 	#services .container {
 		align-items: center;
