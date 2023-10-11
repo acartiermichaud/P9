@@ -267,6 +267,9 @@ footer {
 	margin-top: 60px;
 	padding:30px 20px 40px 20px;
 }
+footer .name {
+	font-size: 23px;
+}
 .footer-column {
 	display: flex;
 	flex-direction: column;
