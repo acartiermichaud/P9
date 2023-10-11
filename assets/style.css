@@ -49,6 +49,8 @@ h2 {
 }
 #about {
 	display: flex;
+	justify-content: center;
+	gap : 30px;
 	background-color: #F6D2B8;
 	padding-inline: 100px;
 	padding-block: 100px;
@@ -73,7 +75,7 @@ h2 {
 }
 .image-portrait, .image-camera {
 	width: 360px;
-	height: auto;
+	height: 360px;
 }
 #about-me {
 	flex: 2;
@@ -87,10 +89,10 @@ h2 {
 	font-weight: 800;
 	font-style: italic;
 	font-size: 18px;
-	width: 80%;
+	width: 95%;
 }
 #about-me p {
-	width: 80%;
+	width: 95%;
 }
 .title{
 	text-align: center;
@@ -150,12 +152,13 @@ h2 {
 	font-weight: 800;
 	font-size: 22px;
 }
-#services {
+#services, #address {
 	margin: auto;
 	background-color: #A8D5D8 ;
 	position: relative;
 }
-#services .container::before{
+#services .container::before, 
+#address .container::before{
 	content: ' ';
 	background-color: #1C6474;
 	position: absolute;
@@ -165,15 +168,19 @@ h2 {
 	left: 0;
 	z-index: 0;
 }
-#services .container {
-	justify-content: space-between;
+#services .container, #address .container {
 	display: flex;
 	padding : 2em 0;
 }
-.service {
+#services .container {
+	justify-content: space-between;
+}
+#address .container {
+	justify-content: center;
+	gap : 80px;
+}
+.service, .address-map, .address-txt {
 	background-color: white;
-	max-width: 390px;
-	width: 30%;
 	height: 337px;
 	padding: 1em;
 	display: flex;
@@ -181,12 +188,28 @@ h2 {
 	justify-content: space-between;
 	z-index: 1;
 }
+.service {
+	max-width: 390px;
+	width: 30%;
+}
+.address-map, .address-txt {
+	max-width: 500px;
+	width: 40%;
+}
+.map {
+	width: 100%;
+	height: 100%;
+}
+.address-first-ligne {
+	margin: 0;
+}
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
 	position: relative;
 	padding-inline: 100px;
-	padding-block: 100px;
+	padding-block: 50px;
+	margin-top: 60px;
 }
 #contact .container {
 	display: flex;
@@ -232,7 +255,30 @@ form textarea {
 }
 input[type="submit"] {
 	background-color: #BEB45A;
-	padding: .5em 1em
+	padding: .5em 1em;
+	text-align: center;
+}
+footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #2C3E50;
+	color: white;
+	margin-top: 60px;
+	padding:30px 20px 40px 20px;
+}
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer .footer-social-icon {
+	width: 30px;
+	height: auto;
+}
+.footer-column p {
+	margin: 0;
 }
 
 @media all and (max-width: 1180px) {
@@ -287,19 +333,26 @@ input[type="submit"] {
 	.quote__text {
 		font-size: 25px;
 	}
-	#services .container {
+	#services .container, #address .container {
 		flex-direction: column;
+		gap: 0;
 	}
-	.service {
+	.service, .address-map, .address-txt {
 		width: 100%;
 		max-width: 100%;
-		height: auto;
 		margin: 2em 0;
+	}
+	.service {
+		height: auto;
+	}
+	.address-map, .address-txt {
+		height: 283px;
 	}
 	.service__description{
 		margin-bottom: 1em;
 	}
-	#services .container::before{
+	#services .container::before,
+	#address .container::before {
 		width: 21%;
 		height: 100%;
 		bottom: 0;
@@ -321,6 +374,10 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+	footer {
+		flex-direction: column;
+		gap: 20px;
+	}
 }
 
 @media all and (max-width: 650px) {
@@ -339,10 +396,10 @@ input[type="submit"] {
 	.quote__text {
 		font-size: 20px;
 	}
-	#services .container {
+	#services .container, #address .container {
 		align-items: center;
 	}
-	.service {
+	.service, .address-map, .address-txt {
 		max-width: 90%;
 	}
 	#about, #contact {
@@ -357,6 +414,6 @@ input[type="submit"] {
 	}
 	.image-portrait, .image-camera {
 		width: 250px;
-		height: auto;
+		height: 250px;
 	}
 }
